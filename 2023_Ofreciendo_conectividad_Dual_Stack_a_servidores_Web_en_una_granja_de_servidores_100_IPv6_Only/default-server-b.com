@@ -1,5 +1,3 @@
-root@server-b:/etc/nginx/sites-available# grep -v "#" default 
-
 server {
 	listen [::]:80 default_server;
 
