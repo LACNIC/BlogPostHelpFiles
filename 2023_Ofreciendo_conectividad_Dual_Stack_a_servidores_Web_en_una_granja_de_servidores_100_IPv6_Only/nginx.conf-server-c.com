@@ -1,3 +1,4 @@
+#/etc/nginx/nginx.conf en server-c
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
