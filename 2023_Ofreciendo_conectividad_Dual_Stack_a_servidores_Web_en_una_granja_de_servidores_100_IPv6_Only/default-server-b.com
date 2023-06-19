@@ -1,3 +1,4 @@
+#/etc/nginx/sites-available/default en server-b
 server {
 	listen [::]:80 default_server;
 
