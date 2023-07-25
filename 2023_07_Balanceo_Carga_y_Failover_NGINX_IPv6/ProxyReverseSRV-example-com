@@ -1,0 +1,16 @@
+#/etc/nginx/sites-enabled/example.com
+
+upstream backend {
+    server [2001:db8:123::101];
+    server [2001:db8:123::102] fail_timeout=910s;
+    server [2001:db8:123::103];
+}
+
+server {
+    listen 80;
+    server_name example.com www.example.com;
+
+    location / {
+        proxy_pass http://backend;
+    }
+}
