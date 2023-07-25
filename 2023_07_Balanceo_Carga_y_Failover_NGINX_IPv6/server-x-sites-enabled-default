@@ -1,0 +1,19 @@
+#/etc/nginx/sites-enabled/default  en todos los servidores de la granja. Este archivo es idéntico
+
+server {
+	listen [::]:80 default_server;
+
+
+	root /var/www/html;
+
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name _;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+
+}
+
